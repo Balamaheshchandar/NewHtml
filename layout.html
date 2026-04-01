@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeLearn</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-areas: 
+            "header header"
+            "nav nav"
+            "aside main"
+            "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 90px 40px 1fr 50px;
+            height:100vh;
+        }
+
+        header{
+            grid-area:header;
+            background: linear-gradient(to right, rgb(174, 174, 24), rgb(7, 33, 69));
+            background-color:rgb(41, 41, 255);
+            text-align:center;
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+
+        footer{
+            grid-area:footer;
+            background-color:rgba(0, 0, 0, 0.748);
+            text-align:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+        }
+
+        main{
+            grid-area:main;
+            background-color:rgb(237, 234, 240);
+            font-family:'Times New Roman', Times, serif;
+            padding:15px;
+            overflow-y:auto;
+        }
+
+        nav{
+            grid-area:nav;
+            background-color:rgb(22, 23, 25);
+        }
+
+        nav ul{
+            list-style-type:none;
+            display:flex;
+            justify-content: center;
+            margin:0; padding:0;
+        }
+
+        nav ul li{
+            margin:0 30px;
+            line-height:40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+            font-weight:500;
+        }
+
+        aside{
+            grid-area:aside;
+            background: linear-gradient(rgb(34, 1, 75), rgba(77, 77, 1, 0.782));
+            background-color:rgba(105, 45, 2, 0.868);
+            overflow-y:auto;
+        }
+
+        aside ul{
+            list-style-type:none;
+            padding:10px;
+        }
+
+        aside ul li{
+            margin-bottom:14px;
+            color:rgb(255, 255, 255);
+            font-variant:small-caps;
+            display:flex;
+            align-items:center;
+            gap:8px;
+            font-size:14px;
+        }
+
+        aside ul li img{
+            width:22px;
+            height:22px;
+            object-fit:contain;
+        }
+        aside ul li a{
+            color: rgb(222, 225, 227);
+            text-decoration: none;
+        }
+
+        main h3{
+            margin-bottom:8px;
+            color:rgb(43, 183, 226);
+        }
+
+        main p{
+            margin-bottom:12px;
+            line-height:1.6;
+        }
+        .main-inner{
+            display:grid;
+            grid-template-columns:1fr 180px;
+            gap:15px;
+            height:100%;
+        }
+
+        .content{ overflow-y:auto; }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>CodeLearn</h2>
+            <p>Your Programming Learning Hub</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <ul>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript programming language logo: yellow and black square with stylized JS letters"><a href="#\https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python programming language logo: blue and yellow interlocking snakes forming the letter P"><a href="https://www.w3schools.com/python/default.asp"> Python</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java programming language logo: steaming coffee cup in orange and red tones"><a href="https://www.w3schools.com/java/default.asp"> Java</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C Plus Plus programming language logo: blue shield background with white plus symbols"><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C programming language logo: blue background with white letter C"><a href="https://www.w3schools.com/c/"> C</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript programming language logo: blue square background with white letters TS"><a href="https://www.w3schools.com/typescript/index.php">TypeScript</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust programming language logo: crab silhouette in rust orange color"><a href="https://www.w3schools.com/rust/">Rust</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go programming language logo: cyan and dark blue stylized gopher mascot"><a href="https://www.w3schools.com/go/">Go</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby programming language logo: red gemstone or jewel shape"><a href="https://www.geeksforgeeks.org/ruby/ruby-programming-language/">Ruby</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP programming language logo: purple background with white letter P and elipses"><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift programming language logo: orange and red stylized bird in flight"><a href="https://www.w3schools.com/swift/">Swift</a></li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin programming language logo: purple and orange geometric shape representing a letter K"><a href="https://www.w3schools.com/kotlin/">Kotlin</a></li>
+    
+            </ul>
+        </aside>
+
+        <main>
+            <div class="main-inner">
+                <div class="content">
+                    <h3>Welcome to CodeLearn!</h3>
+                    <p>Start your programming journey with our beginner-friendly courses. Choose any language from the left panel to get started.</p>
+
+                    <h3>Why Learn Programming?</h3>
+                    <p>Programming is one of the most in-demand skills today. Whether you want to build websites, apps, or solve real-world problems, coding gives you the power to create anything.</p>
+
+                    <h3>How It Works</h3>
+                    <p>Pick a language from the sidebar, follow the structured lessons, and practice with hands-on exercises. Track your progress and earn certificates on completion.</p>
+
+                    <h3>Popular This Week</h3>
+                    <p>Python for Beginners &nbsp;|&nbsp; ⭐ JavaScript ES2024 &nbsp;|&nbsp; 🚀 Java OOP Masterclass</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CodeLearn | All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
